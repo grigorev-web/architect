@@ -1,13 +1,24 @@
 import { FC } from "react";
-import Button from "./UI/elements/Button";
+import { PageText } from "./amazon/helpers/PageText";
+import Navbar from "./amazon/navbar";
+import { Container } from "./amazon/navbar/styles";
+
+import Button from "./UI/elements/Button/";
 import AppContainer from "./UI/layout/AppContainer";
 
-const App:FC = () => {
+const App: FC = () => {
   return (
-    <AppContainer>
-      <Button>123</Button>
-      <Button>321</Button>
-    </AppContainer>
+    <>
+      <Container>
+        <Navbar />
+      </Container>
+
+      <Button variant="success" size="sm">
+        123
+      </Button>
+
+      <Button variant="primary">second button</Button>
+    </>
   );
 };
 
