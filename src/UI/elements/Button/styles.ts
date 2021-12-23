@@ -1,41 +1,30 @@
 import styled from "styled-components";
-import {IButton} from './interface'
-
+import {
+  buttonBackgroundColor,
+  buttonBackgroundColorActive,
+  buttonBackgroundColorHover,
+  buttonTextColor,
+} from "./colors";
+import { IButton } from "./interface";
 
 export const StyledButton = styled.div`
 position: relative;
 outline: none;
 display: inline-block;
-font-weight: 400;
+font-weight: 500;
 
-color: ${(props:IButton) => {
-  switch (props.variant) {
-    case "primary":
-      return "#fff";
-    case "success":
-      return "#fff";
-
-    default:
-      return "#000";
-  }
-}};
+color: ${(props: IButton) => {
+  return buttonTextColor[props.variant];
+}}};
 text-align: center;
 vertical-align: middle;
 user-select: none;
-background-color: ${(props:IButton) => {
-  if (props.outline) return "white";
-  switch (props.variant) {
-    case "primary":
-      return "#3f6ad8";
-    case "success":
-      return "green";
-
-    default:
-      return "white";
-  }
+background-color: ${(props: IButton) => {
+  if (props.outline) return "transparent";
+  return buttonBackgroundColor[props.variant];
 }};
 border: 1px solid transparent;
-border-color: #3f6ad8;
+border-color: ${(props: IButton) =>buttonBackgroundColor[props.variant]};
 padding: 0.375rem 0.75rem;
 font-size: 1rem;
 line-height: 1.5;
@@ -45,21 +34,26 @@ transition: color 0.15s, background-color 0.15s, border-color 0.15s,
 -webkit-appearance: button;
 text-transform: none;
 overflow: visible;
-font-family: inherit;
+/* font-family: inherit; */
 text-indent: 0px;
 text-shadow: none;
+margin: 3px;
 cursor: pointer;
 
 &:hover {
   color: #fff;
-  background-color: #2955c8;
-  border-color: #2651be;
+  background-color: ${(props: IButton) => {
+    if (props.outline) return "transparent";
+    return buttonBackgroundColorHover[props.variant];
+  }};
   text-decoration: none;
 }
 
 &:active {
   color: #fff;
-  background-color: #1f44a3;
-  border-color: #19306a;
+  background-color: ${(props: IButton) => {
+    if (props.outline) return "transparent";
+    return buttonBackgroundColorActive[props.variant];
+  }};
 }
 `;

@@ -1,23 +1,40 @@
 import { FC } from "react";
-import { PageText } from "./amazon/helpers/PageText";
-import Navbar from "./amazon/navbar";
-import { Container } from "./amazon/navbar/styles";
+import Container from "./UI/layout/Container";
 
 import Button from "./UI/elements/Button/";
-import AppContainer from "./UI/layout/AppContainer";
-
+import Card from "./UI/layout/Card";
 const App: FC = () => {
   return (
     <>
       <Container>
-        <Navbar />
+        <Card>
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">второстепенный</Button>
+          <Button variant="success">успех</Button>
+          <Button variant="info">инфо</Button>
+          <Button variant="warning">предупреждение</Button>
+          <Button variant="danger">опасность</Button>
+          <Button variant="focus">фокус</Button>
+          <Button variant="alt">альтернатива</Button>
+          <Button variant="light">светлый</Button>
+          <Button variant="dark">тёмный</Button>
+          <Button variant="link">ссылка</Button>
+        </Card>
+        <Card>
+          <p>
+            Учитывая ключевые сценарии поведения, курс на
+            социально-ориентированный национальный проект однозначно фиксирует
+            необходимость кластеризации усилий. Вот вам яркий пример современных
+            тенденций - разбавленное изрядной долей эмпатии, рациональное
+            мышление напрямую зависит от благоприятных перспектив.
+            Предварительные выводы неутешительны: синтетическое тестирование
+            обеспечивает широкому кругу (специалистов) участие в формировании
+            новых принципов формирования материально-технической и кадровой
+            базы!
+          </p>
+        </Card>
+        <Card>123</Card>
       </Container>
-
-      <Button variant="success" size="sm">
-        123
-      </Button>
-
-      <Button variant="primary">second button</Button>
     </>
   );
 };
