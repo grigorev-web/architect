@@ -1,5 +1,5 @@
 import { FC } from "react";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "../../global/GlobalStyle";
 import { StyledContainer } from "./styles";
 
 

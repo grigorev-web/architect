@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 
-export const StyledCard = styled.div`
+export const StyledCol = styled.div`
     position: relative;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;

@@ -14,6 +14,7 @@ export const buttonBackgroundColor = {
     link: 'transparent',
 }
 
+
 export const buttonTextColor = {
     primary: '#fff',
     secondary: '#fff',
@@ -25,7 +26,7 @@ export const buttonTextColor = {
     alt: '#fff',
     light: '#212529',
     dark: '#fff',
-    link: '#fff',
+    link: '#007bff',
 }
 
 export const buttonBackgroundColorHover = {
@@ -44,15 +45,15 @@ export const buttonBackgroundColorHover = {
 
 
 export const buttonBackgroundColorActive = {
-    primary: '#2651be',
-    secondary: '#545b62',
-    success: '#31a66a',
-    info: '#0098ef',
-    warning: '#eca909',
-    danger: '#b81f44',
-    focus: '#322f3e',
-    alt: '#633e71',
-    light: '#dbdbdb',
-    dark: '#23272b',
+    primary: '#21449f',
+    secondary: '#3f454a',
+    success: '#257e50',
+    info: '#0084cf',
+    warning: '#d59808',
+    danger: '#9f1c3b',
+    focus: '#1d1c24',
+    alt: '#4f325a',
+    light: '#c5c4c4',
+    dark: '#0f1112',
     link: 'transparent',
 }
