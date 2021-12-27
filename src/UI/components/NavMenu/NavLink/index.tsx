@@ -1,9 +1,14 @@
-import { FC } from "react";
+import React, { FC } from "react";
+
+interface INavLink{
+    path: string;
+    element: React.ReactElement;
+    item:string;
+    icon?:React.ReactElement;
+}
 
 
-
-
-const NavLink:FC = ()=>{
+const NavLink:FC<INavLink> = (props)=>{
     return <div>NavLInk</div>
 }
 
