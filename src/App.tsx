@@ -11,11 +11,9 @@ const App: FC = () => {
     <>
       <GlobalStyle />
       <NavMenu>
-        <NavLink item="Главная" path="main" element={<Dashboard1 />}>
-          <NavLink item="Подменю1" path="main/sub" element={<Dashboard2/>} />
-        </NavLink>
-        <NavLink item="Блог" path="blog" element={<Dashboard2 />} />
-        <NavLink item="Контакты" path="contacts" element={<Dashboard2 />} />
+        <NavLink label="Главная" path="/" element={<Dashboard1 />}/>
+        <NavLink label="Блог" path="blog" element={<Dashboard2 />} />
+        <NavLink label="Контакты" path="contacts" element={<Dashboard2 />} />
       </NavMenu>
     </>
   );

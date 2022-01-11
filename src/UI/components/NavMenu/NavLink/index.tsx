@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
 interface INavLink{
-    path: string;
-    element: React.ReactElement;
-    item:string;
+    label:string;
+    path?: string;
+    element?: React.ReactElement;
     icon?:React.ReactElement;
 }
 
